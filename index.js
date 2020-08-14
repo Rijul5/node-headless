@@ -1,11 +1,11 @@
 var fs = require('fs');
 var spawn;
 
-try {
-  spawn = require('child-killer').spawn;
-} catch(e) {
-  spawn = require('child_process').spawn;
-}
+// try {
+//   spawn = require('child-killer').spawn;
+// } catch(e) {
+//   spawn = require('child_process').spawn;
+// }
 
 function findFreeServernum(servernum, callback) {
   fs.exists('/tmp/.X' + servernum + '-lock', function(exists) {
